@@ -10,13 +10,13 @@ generate uinput keypress events that advmenu and advmame can read.
 
 Buttons are wired as follows:
 
-           3V3
-            |
-           10k
-            |
- |  o-------o--1K---o GPIO input
--|             
- |  o--gnd
+             3V3
+              |
+             10k
+              |
+   |  o-------o--1K---o GPIO input
+  -|             
+   |  o--gnd
 
 /sys/class/gpio is used to read the inputs (set to interrupt on both edges).
 
