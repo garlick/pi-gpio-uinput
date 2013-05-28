@@ -1,0 +1,47 @@
+#!/bin/bash
+
+declare -r gdir=/sys/class/gpio
+
+GPIO_PLAYER1="4 15 17 18 27 22 23"
+GPIO_PLAYER2="24 10 9 25 11 8 7"
+
+gpiocfg() {
+	local i=$1
+
+	if ! [ -d $gdir/gpio$i ]; then
+		echo $i >$gdir/export
+	fi
+	echo in >$gdir/gpio$i/direction
+	echo both >$gdir/gpio$i/edge
+}
+
+gpiotest() {
+	local i=$i
+	local val
+
+	case $i in
+		4|24) echo Press down ;;	
+		15|10) echo Press up ;;	
+		17|9) echo Press right ;;	
+		18|25) echo Press left ;;	
+		27|11) echo Press button 1 ;;	
+		22|8) echo Press button 2 ;;	
+		23|7) echo Press button 3 ;;	
+	esac
+	val=$(cat $gdir/gpio$i/value)
+	[ $val == 1 ] || echo ERROR: initial val of gpio$i is $val
+	val=$(./readpin $gdir/gpio$i/value)
+	[ $val == 0 ] || echo ERROR: val of gpio$i after keypress is $val
+}
+
+echo TESTING PLAYER 1
+for i in $GPIO_PLAYER1; do
+	gpiocfg $i
+	gpiotest $i
+done
+
+echo TESTING PLAYER 2
+for i in $GPIO_PLAYER2; do
+	gpiocfg $i
+	gpiotest $i
+done
