@@ -302,9 +302,9 @@ input_map[p1_up] keyboard[1,scan0] or keyboard[0,8_pad] or keyboard[0,up] or key
 input_map[p1_down] keyboard[1,scan0] or keyboard[0,2_pad] or keyboard[0,down] or keyboard[1,scan0]
 input_map[p1_right] keyboard[1,scan0] or keyboard[0,6_pad] or keyboard[0,right] or keyboard[1,scan0]
 input_map[p1_left] keyboard[1,scan0] or keyboard[0,4_pad] or keyboard[0,left] or keyboard[1,scan0]
-input_map[p1_button1] keyboard[0,enter] or keyboard[1,enter]
-input_map[p1_button2] keyboard[0,lalt] or keyboard[1,lalt]
-input_map[p1_button3] keyboard[0,space] or keyboard[1,space]
+input_map[p1_button1] keyboard[0,enter] or keyboard[1,scan0]
+input_map[p1_button2] keyboard[0,lalt] or keyboard[1,scan0]
+input_map[p1_button3] keyboard[0,space] or keyboard[1,scan0]
 input_map[start1] keyboard[1,scan0] or keyboard[0,1]
 input_map[start2] keyboard[1,scan0] or keyboard[0,2]
 input_map[coin1] keyboard[1,scan0] or keyboard[0,5]
@@ -316,7 +316,7 @@ input_map[p2_button1] keyboard[1,scan0] or keyboard[0,a]
 input_map[p2_button2] keyboard[1,scan0] or keyboard[0,s]
 input_map[p2_button3] keyboard[1,scan0] or keyboard[0,q]
 input_map[ui_cancel] keyboard[1,scan0] keyboard[1,scan0] or keyboard[0,1] keyboard[0,2] or keyboard[0,esc] or keyboard[1,scan0]
-input_map[ui_configure] keyboard[0,tab] or keyboard[1,tab]
+input_map[ui_configure] keyboard[0,tab] or keyboard[1,scan0]
 input_dipswitch[cabinet] cocktail
 mspacman/input_dipswitch[cabinet] cocktail
 centiped/input_dipswitch[cabinet] cocktail
@@ -335,3 +335,4 @@ retofinv/input_dipswitch[cabinet] cocktail
 invadpt2/input_dipswitch[cabinet] cocktail
 superpac/input_dipswitch[cabinet] cocktail
 tron/input_dipswitch[cabinet] cocktail
+jrpacman/input_dipswitch[cabinet] cocktail

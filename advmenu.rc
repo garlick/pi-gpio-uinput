@@ -78,8 +78,8 @@ idle_start 0 0
 include 
 input_hotkey yes
 lock no
-menu_base 0
-menu_rel 17
+menu_base 12
+menu_rel 7
 merge differential
 misc_exit normal
 misc_quiet no
@@ -152,7 +152,7 @@ ui_startup "/home/pi/pimame_files/advmenu_background.png"
 ui_topbar yes
 ui_translucency 0.6
 event_assign enter enter or enter_pad or 1
-advmame/mode list
+advmame/mode tile_small
 group_include "<undefined>"
 group_include "Bad"
 group_include "Good"
@@ -202,9 +202,32 @@ emulator_attrib "advmame" vertical include
 emulator_attrib "advmame" neogeo include
 emulator_attrib "advmame" deco exclude
 emulator_attrib "advmame" playchoice exclude
-game "advmame/centiped" "" "" 97 2 ""
-game "advmame/gridlee" "" "" 28 1 ""
-game "advmame/invadpt2" "" "" 173 2 ""
+game "advmame/asteroid" "" "" 230 3 ""
+game "advmame/centiped" "" "" 96691 36 ""
+game "advmame/ckong" "" "" 124 4 ""
+game "advmame/cninja" "" "" 33830 18 ""
+game "advmame/defender" "" "" 622 8 ""
+game "advmame/digdug" "" "" 3219 12 ""
+game "advmame/digdug2" "" "" 871 7 ""
+game "advmame/dkong" "" "" 2194 6 ""
+game "advmame/dkong3" "" "" 1659 8 ""
+game "advmame/dkongjr" "" "" 222 3 ""
+game "advmame/frogger" "" "" 112274 53 ""
+game "advmame/galaga" "" "" 1270 8 ""
+game "advmame/galaga88" "" "" 579 5 ""
+game "advmame/gridlee" "" "" 438 8 ""
+game "advmame/invadpt2" "" "" 576 6 ""
+game "advmame/invds" "" "" 39674 2 ""
+game "advmame/invho2" "" "" 65 3 ""
 game "advmame/invinco" "" "" 51 1 ""
-game "advmame/mspacman" "" "" 230 3 ""
-game "advmame/superpac" "" "" 91 1 ""
+game "advmame/joust" "" "" 106032 38 ""
+game "advmame/joust2" "" "" 342 4 ""
+game "advmame/jrpacman" "" "" 1186859 128 ""
+game "advmame/mario" "" "" 2231 15 ""
+game "advmame/mspacman" "" "" 19187 41 ""
+game "advmame/pacmania" "" "" 318 1 ""
+game "advmame/pacplus" "" "" 5271 19 ""
+game "advmame/qbert" "" "" 1367 8 ""
+game "advmame/retofinv" "" "" 774 5 ""
+game "advmame/superpac" "" "" 46478 36 ""
+game "advmame/tron" "" "" 181 2 ""
