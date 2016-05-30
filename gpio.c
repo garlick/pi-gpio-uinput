@@ -75,10 +75,10 @@ static map_t map[] = {
     { .pin = 27,   .key = KEY_ENTER,    .fd = -1, }, /* green */
     { .pin = 22,   .key = KEY_LEFTALT,  .fd = -1, }, /* blue */
     { .pin = 23,   .key = KEY_SPACE,    .fd = -1, }, /* yellow */
-    { .pin = 28,   .key = KEY_1,        .fd = -1, }, /* 1-player */
-    { .pin = 29,   .key = KEY_2,        .fd = -1, }, /* 2-player */
-    { .pin = 30,   .key = KEY_5,        .fd = -1, }, /* side button (coin) */
-    { .pin = 31,   .key = KEY_ESC,      .fd = -1, }, /* side button (esc) */
+    { .pin = 19,   .key = KEY_1,        .fd = -1, }, /* 1-player */
+    { .pin = 16,   .key = KEY_2,        .fd = -1, }, /* 2-player */
+    { .pin = 26,   .key = KEY_5,        .fd = -1, }, /* side button (coin) */
+    { .pin = 20,   .key = KEY_ESC,      .fd = -1, }, /* side button (esc) */
 
     /* player 2 controls */
     { .pin = 24,   .key = KEY_F,        .fd = -1, }, /* down */
