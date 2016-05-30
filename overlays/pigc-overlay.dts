@@ -1,0 +1,24 @@
+/* install compiled dtbo to /boot/overlays, and add to /boot/config.txt:
+ *   dtoverlay=pigc
+ */
+
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "brcm,bcm2708";
+
+	fragment@0 {
+		target = <&gpio>;
+		__overlay__ {
+			pinctrl-names = "default";
+			pinctrl-0 = <&pigc_pins>;
+
+			pigc_pins: pigc_pins {
+				brcm,pins =     <4 15 17 18 27 22 23 24 10  9 25 11  8  7 19 16 26 20>;
+				brcm,function = <0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0>; /* in */
+				brcm,pull =     <0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0>; /* off */
+			};
+		};
+	};
+};
